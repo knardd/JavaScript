@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>array</title>
+  </head>
+  <body>
+    <script>
+      var produk = ["makanan", "senter", "tisu"];
+      document.write("daftar produk");
+      document.write("<ol>");
+      for (let i = 0; i < produk.length; i++)
+        document.write(`<li>${produk[i]}</li>`);
+      document.write("</ol>");
+
+      var produk = ["makanan", "senter", "tisu", "obeng", "es teh"];
+      produk.push("televisi"); //menambahkan dari belakang
+      delete produk[1]; // menghapus array
+      produk.shift(); //menghapus array dari depan
+      produk[2] = "snack"; //mengubah array
+      produk.pop();
+
+      document.write("daftar produk");
+      document.write("<ol>");
+      produk.forEach((data) => {
+        document.write(`<li>${data}</li>`);
+      });
+      document.write("</ol>");
+
+      // var angka = [1, 3, 5, 7, 9, 2, 4, 6, 8, 0];
+      // console.log(angka.sort); //error
+    </script>
+  </body>
+</html>
